@@ -152,3 +152,10 @@ h2 {
     background: #9FE8DF;
 }
 
+@media (min-width: 400px){
+    .container {
+        display: flex;
+        flex-direction: row;
+        
+      }
+}
