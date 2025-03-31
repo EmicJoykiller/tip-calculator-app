@@ -13,17 +13,18 @@
 }
 
 :root {
-    --Green-400: hsl(172, 67%, 45%);
-    --Green900: hsl(183, 100%, 15%);
-    --Grey500: hsl(186, 14%, 43%);
-    --Grey400: hsl(184, 14%, 56%);
-    --Grey200: hsl(185, 41%, 84%);
-    --Grey50: hsl(189, 47%, 97%);
-    --White: hsl(0, 100%, 100%);
-  }
+  --Green-400: hsl(172, 67%, 45%);
+  --Green900: hsl(183, 100%, 15%);
+  --Grey500: hsl(186, 14%, 43%);
+  --Grey400: hsl(184, 14%, 56%);
+  --Grey200: hsl(185, 41%, 84%);
+  --Grey50: hsl(189, 47%, 97%);
+  --White: hsl(0, 100%, 100%);
+}
 
 html,
 body {
+  padding: 1rem;
   height: 100%;
   width: 100%;
   background-color: #c5e4e7;
@@ -31,22 +32,123 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
   height: 100vh;
 }
 
-
 .container {
   background: var(--White);
-  width: 90%;
+  width: 100%;
+  display: flex;
   max-width: 375px;
   padding: 20px;
   border-radius: 15px;
+  
 }
 
 .input-section label {
-    display: block;
-    margin: 10px 0 5px;
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+  color: var(--Grey500);
+}
+
+.input-box {
+  display: flex;
+  align-items: center;
+  background: var(--Grey50);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.input-box span {
+  margin-right: 10px;
+  font-weight: bold;
+  color: var(--Grey500);
+}
+
+input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  text-align: right;
+  outline: none;
+}
+
+.tip-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.tip-btn,
+#customTip {
+  background: var(--Green900);
+  color: var(--White);
+  border: none;
+  padding: 10px;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tip-btn:hover,
+.tip-btn.selected {
+  background: var(--Green-400);
+}
+
+#customTip {
+  background: var(--Grey50);
+  color: var(--Green900);
+  text-align: center;
+  font-weight: bolder;
+}
+
+.result-section {
+    background: var(--Green900);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.result-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.result-box p {
+    color: white;
+}
+
+.result-box span {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+h2 {
+    color: var(--Green-400);
+    font-size: 24px;
+}
+
+#resetBtn {
+    width: 100%;
+    background: var(--Green-400);
+    border: none;
+    padding: 10px;
+    font-size: 18px;
     font-weight: bold;
-    color: var(--Grey500);
+    color: var(--Green900);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#resetBtn:hover {
+    background: #9FE8DF;
 }
 
